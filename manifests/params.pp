@@ -17,7 +17,7 @@ class nginx::params {
 
   $config_process_user = $facts['os']['family'] ? {
     'Debian' => 'www-data',
-    default  => undef,
+    default  => 'nginx',
   }
 
   $vhost_dir = $facts['os']['family'] ? {
