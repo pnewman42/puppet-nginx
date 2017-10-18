@@ -14,7 +14,7 @@ class nginx::config(
   file { 'nginx_conf': 
     ensure => $ensure,
     path => "${config_dir}/nginx.conf",
-    mode => mode,
+    mode => $mode,
     owner => $owner,
     group => $group,
     content => template("${module_name}/conf.d/nginx.conf.erb"),
